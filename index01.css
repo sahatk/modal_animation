@@ -1,0 +1,154 @@
+/* 레이아웃 */
+#wrap {
+	position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#wrap .modal-01{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 400px;
+	height: 400px;
+	border: 1px solid #ccc;
+}
+#wrap .modal-02{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 400px;
+	height: 400px;
+	border: 1px solid #ccc;
+
+}
+
+.md-background {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transition: all 0.5s ease-in;
+	z-index: -1;
+}
+.md-background.show{
+	background-color:rgba(0,0,0,0.6);
+}/* // 레이아웃 */
+
+/* 컴포넌트 */
+
+/* 버튼 */
+.btn {
+  width: 130px;
+	height: 60px;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 15px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: block;
+  transition: 0.4s;
+}
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+.btn.btn--brown {
+  color: #592B18;
+  border-color: #592B18;
+}
+.btn.btn--brown:hover {
+  color: #fff;
+  background-color: #592B18;
+}
+.btn.show {
+	z-index: 0;
+}
+/* //버튼 */
+
+/* //컴포넌트 */
+
+
+
+.md-content {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background-color: #fff;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+	border: 1px solid #592B18;
+	border-radius: 15px;
+}
+
+.md-content h3 {
+	width: 200px;
+	height: 30px;
+	text-align: center;
+	border: 1px solid #592B18;
+  margin-bottom: 30px;
+	border-radius: 15px;
+  color: #fff;
+  background-color: #592B18;
+}
+
+.md-content .md-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.md-modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 0%;
+	max-width: 500px;
+	min-width: 320px;
+	height: auto;
+	visibility: hidden;
+	transform: translateX(-50%) translateY(-50%);
+	opacity: 0;
+	transition: all 0.5 ease-in;
+}
+.md-modal.show {
+	width: 50%;
+	z-index: 10;
+	visibility: visible;
+	opacity: 1;
+}
+
+/* Effect 1: Fade in and scale up */
+.md-modal .md-content-01 {
+	transform: scale(0.7);
+	opacity: 0;
+	transition: all 0.5s ease-in;
+}
+
+.md-modal.show .md-content-01{
+	transform: scale(1);
+	opacity: 1;
+	transition: all 0.5s ease-in;
+}
+
+/* Effect 2: Slide Bottom */
+.md-modal .md-content-02 {
+	transform: translateY(50%);
+	opacity: 0;
+	transition: all 0.5s ease-in;
+}
+
+.md-modal.show .md-content-02{
+	transform: translateY(0);
+	opacity: 1;
+	transition: all 0.5s ease-in;
+}
