@@ -4,7 +4,7 @@ const mdClose01 = document.querySelector("#md-close-01");
 const mdClose02 = document.querySelector("#md-close-02");
 const modal01 = document.querySelector("#modal-01");
 const modal02 = document.querySelector("#modal-02");
-const mdBg = document.querySelector(".md-background");
+const mdBg = document.querySelector(".md-bg");
 const commonBtn = document.querySelectorAll(".btn");
 
 
